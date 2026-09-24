@@ -1,0 +1,13 @@
+{
+  "name": "freefall-game",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A browser dropper game with a Three.js lobby and Canvas gameplay.",
+  "scripts": {
+    "test": "node test.cjs && node infinite-test.cjs && node smoke.cjs",
+    "check": "node --check engine.js && node --check game.js && node --check lobby3d.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
