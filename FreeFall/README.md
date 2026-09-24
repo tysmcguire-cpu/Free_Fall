@@ -51,7 +51,7 @@ Collect three stars to activate **God Mode** for six seconds: invincibility, 1.5
 - **Seeded generation:** repeatable obstacle layouts for testing; a fresh seed for each Infinite run.
 - **Local storage:** campaign completion, collected-star records, and Infinite best run. No backend or account system.
 
-The project was developed iteratively with AI coding assistance.
+The project was developed manually with the help of AI coding assistance.
 
 ## Source map
 
