@@ -5,7 +5,8 @@
   "description": "A browser dropper game with a Three.js lobby and Canvas gameplay.",
   "scripts": {
     "test": "node test.cjs && node infinite-test.cjs && node smoke.cjs",
-    "check": "node --check engine.js && node --check game.js && node --check lobby3d.js"
+    "check": "node --check engine.js && node --check game.js && node --check lobby3d.js && node --check build.cjs",
+    "build": "node build.cjs"
   },
   "engines": {
     "node": ">=20"

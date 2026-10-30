@@ -4,23 +4,31 @@ A neon browser dropper game: steer through a cylindrical shaft, avoid moving haz
 
 **Status:** playable browser prototype. Not yet released on the App Store.
 
-## Play locally
+## Download and play
 
-Download or clone the repository and open `index.html` in a modern browser with WebGL support. Keep the files together. No build step, package installation, account, or runtime network connection is required; Three.js is bundled locally.
+**Download `FreeFall.html`, double-click it, and press Play.**
 
-For a local development server, run:
+1. Save the `FreeFall.html` download to your computer.
+2. Open it in Chrome, Edge, Firefox, or Safari. If your computer asks which app to use, choose your web browser.
+3. Select **Play current level**. Use the arrow keys or WASD to steer, or drag on the screen. Avoid obstacles, collect stars, and land on the target.
 
-```sh
-python -m http.server 8000
-```
+That's it. No installation, account, terminal, or internet connection is needed after downloading. The complete game is inside that one file, so you can keep it anywhere without managing extra folders. Desktop browsers are the recommended way to play; opening downloaded HTML files on phones depends on the device and file app.
 
-Then open http://localhost:8000. Progress belongs to the browser and origin, so opening the file directly and playing through localhost can have separate saves.
+Press **Escape** or the pause button for a break. If you want a slower start, choose **Practice** and lower the fall-speed slider. Complete campaign levels to unlock the next one, or choose **Infinite** for an endless run.
+
+Progress saves in your current browser when browser storage is available. Keep using the same file location and browser to retain your progress. Private browsing, moving the file, or clearing browser data may reset your save.
+
+### Getting the download from GitHub
+
+The ready-to-play file is built by the **Check and package FreeFall** workflow. In this repository's **Actions** tab, open a successful run and download **FreeFall-download** under Artifacts (GitHub requires signing in). Extract the ZIP, then open `FreeFall.html`. Repository owners can also attach this file to a GitHub Release so players can download it without an account.
+
+If you downloaded the source ZIP using **Code → Download ZIP**, extract the whole ZIP and open `index.html` instead. Keep the extracted files together.
 
 ## Controls
 
 - WASD / arrow keys, or pointer dragging: steer.
 - Escape / pause button: pause or resume.
-- Choose a level, then select **Descend** to launch.
+- Choose a level, then select **Play current level** to launch.
 - Practice: adjust speed and save or restore a checkpoint.
 
 ## Modes
@@ -65,6 +73,10 @@ The project was developed iteratively with AI coding assistance.
 | `infinite-test.cjs` | Difficulty boundaries, palettes, and generation checks |
 | `smoke.cjs` | Mocked rendering and gameplay-state regression checks |
 
+## Build the single-file download
+
+Developers: run `npm run build` with Node.js 20 or newer. The ready-to-play file is written to `dist/FreeFall.html` with all scripts, styling, and the Three.js license included. Players do not need Node.js.
+
 ## Validation
 
 With Node.js 20 or newer installed:
@@ -88,3 +100,4 @@ Tests cover campaign progression, practice isolation, collision rules, Infinite 
 ## Third-party software
 
 Bundled Three.js is covered by the MIT license in `THREE-LICENSE.txt`. No license is granted here for the original game code; choose a project license before inviting reuse or redistribution.
+
